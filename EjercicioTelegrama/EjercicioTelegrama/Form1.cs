@@ -33,6 +33,7 @@ namespace EjercicioTelegrama
             char tipoTelegrama = ' ';
             int numPalabras = 0;
             double coste;
+            string[] palabras;
 
             //Leo el telegrama  
             textoTelegrama = txtTelegrama.Text;
@@ -43,13 +44,15 @@ namespace EjercicioTelegrama
             }
             //Obtengo el número de palabras que forma el telegrama  
             numPalabras = textoTelegrama.Length;
+            palabras = textoTelegrama.Split(' ');
+            numPalabras = palabras.Length;
 
             //Si el telegrama es ordinario 
             if (rdbOrdinario.Checked)
             {
-                if (numPalabras <= 10)
+                if (numPalabras <= 9)
                 {
-                    coste = 2.5;
+                    coste = 3;
                 }
                 else
                 {
@@ -61,9 +64,9 @@ namespace EjercicioTelegrama
             {
                 if (tipoTelegrama == 'u')
                 {
-                    if (numPalabras <= 10)
+                    if (numPalabras <= 9)
                     {
-                        coste = 5;
+                        coste = 6;
                     }
                     else
                     {
