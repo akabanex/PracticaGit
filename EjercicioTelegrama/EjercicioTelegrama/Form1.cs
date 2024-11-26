@@ -30,14 +30,14 @@ namespace EjercicioTelegrama
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = 'o';
+            char tipoTelegrama = ' ';
             int numPalabras = 0;
             double coste;
 
             //Leo el telegrama  
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente? 
-            if (chkUrgente.Checked)
+            if (rdbUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }
@@ -45,7 +45,7 @@ namespace EjercicioTelegrama
             numPalabras = textoTelegrama.Length;
 
             //Si el telegrama es ordinario 
-            if (tipoTelegrama == 'o')
+            if (rdbOrdinario.Checked)
             {
                 if (numPalabras <= 10)
                 {
